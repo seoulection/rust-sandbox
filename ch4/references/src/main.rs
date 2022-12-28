@@ -22,10 +22,10 @@ fn main() {
     // simultaneous
     let mut x = String::from("hello");
     {
-        let r1 = &mut x;
+        let _r1 = &mut x;
     } // r1 goes out of scope, so we can make new references without any problems
 
-    let r2 = &mut s;
+    let _r2 = &mut s;
 
     // we CAN have multiple immutable references within the same scope since those references do
     // not alter the data
